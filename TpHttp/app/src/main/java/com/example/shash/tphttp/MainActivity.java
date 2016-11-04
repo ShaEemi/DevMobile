@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -114,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
                                         Log.e("htmle", rs);
                                         TextView t1 = (TextView) findViewById(R.id.textView);
                                         t1.setText("" + rs);
+                                        // le scroll a ete fait grace a la dock sur stackoverflow url:http://stackoverflow.com/questions/1748977/making-textview-scrollable-in-android
+                                        t1.setMovementMethod(new ScrollingMovementMethod());
                                     } catch (IOException e) {
                                         e.printStackTrace();
                                     }
@@ -163,6 +166,8 @@ public class MainActivity extends AppCompatActivity {
                                         Log.e("html", rfs);
                                         TextView t1 = (TextView) findViewById(R.id.textView);
                                         t1.setText(""+rfs);
+                                        // le scroll a ete fait grace a la dock sur stackoverflow url:http://stackoverflow.com/questions/1748977/making-textview-scrollable-in-android
+                                        t1.setMovementMethod(new ScrollingMovementMethod());
 
                                     } catch (FileNotFoundException e) {
                                         e.printStackTrace();

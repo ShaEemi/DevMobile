@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                         Date d = new Date();
                         long n = d.getTime();
                         long dif = n - lm;
-                        int sem = 604800;
+                        int sem = 604800000;
                         Log.d("dif", ""+dif);
                         if ( f.exists() && ( dif > sem ) ) {
                             f.delete();
